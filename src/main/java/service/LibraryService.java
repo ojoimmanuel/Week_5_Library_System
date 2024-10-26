@@ -12,5 +12,5 @@ public interface LibraryService {
     //    public void borrowBook(RequestServiceImpl request1, RequestServiceImpl request2);
     public String issueBook(String bookTitle);
 
-    public void returnBook(String bookTitle);
+    public String returnBook(String bookTitle);
 }

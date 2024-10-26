@@ -51,10 +51,18 @@ public class LibraryServiceImpl implements LibraryService {
 
 
 @Override
-public void returnBook(String bookTitle) {
-    Book returnedBook = new Book(bookTitle, 1);
-    BookServiceImpl returnedBookImpl = new BookServiceImpl();
-    returnedBookImpl.addCopy(returnedBook);
+public String returnBook(String bookTitle) {
+    List<Book> booksList = library.getBooksList().get(bookTitle.toUpperCase());  //make bookTitle non case sensitive
+
+    for (Book books : booksList ) {
+        if(books.getBookTitle().toUpperCase().equals(bookTitle.toUpperCase())) {
+            BookServiceImpl returnedBookImpl = new BookServiceImpl();
+            returnedBookImpl.addCopy(books);
+            return (bookTitle + " has been returned and available for issue.");
+        }
+    }
+//    Book returnedBook = new Book(bookTitle.toUpperCase(), 1);
+    return "";
 }
 
 }
