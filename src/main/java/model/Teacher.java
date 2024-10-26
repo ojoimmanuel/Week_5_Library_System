@@ -7,7 +7,6 @@ public class Teacher extends Person {
 
     public Teacher(String name, PersonGroup personGroup) {
         super(name, personGroup);
-//        this.priority = priority;
     }
 
     @Override
@@ -21,6 +20,4 @@ public class Teacher extends Person {
                 "priority=" + getPriority() +
                 '}';
     }
-
-
 }

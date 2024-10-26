@@ -18,10 +18,6 @@ public class Library {
         return booksList;
     }
 
-//    public List<Book> getBooksList() {
-//        return booksList;
-//    }
-
     public PriorityQueue<Person> getQueue() {
         return queue;
     }

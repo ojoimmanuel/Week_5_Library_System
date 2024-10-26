@@ -25,6 +25,4 @@ public class Student extends Person {
         return "Student " + this.getName() + ", level=" + level + ", priority=" + getPriority();
     }
 
-
-
 }
